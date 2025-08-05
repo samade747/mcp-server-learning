@@ -12,18 +12,19 @@ mcp = FastMCP(name="mcp_server", stateless_http=True)
 
 #------------------ tools --------------------
 
-@mcp.tool
+@mcp.tool()
 def hello(name: str) -> str:
     """Returns a greeting message."""
     return f"Hello, {name}!"
 
-@mcp.tool
-def add(a: int, b: int) -> int:
-    return a + b
+# @mcp.tool
+# def add(a: int, b: int) -> int:
+#     return a + b
 
 #------------------ app --------------------
 
 
 mcp_app = mcp.streamable_http_app()
 
-
+# how to run
+# uv run uvicorn mcp_server:mcp_app --reload 
