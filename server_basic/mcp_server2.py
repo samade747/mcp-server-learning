@@ -24,6 +24,9 @@ def hello(name: str) -> str:
 #------------------ app --------------------
 
 
+
+
+#------------------ resource --------------------
 @mcp.resource(
     "docs://documnets"
 )
